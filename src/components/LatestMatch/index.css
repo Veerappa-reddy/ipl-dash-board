@@ -1,1 +1,11 @@
-/* Write your CSS here */
+.latest-match-container {
+  display: flex;
+}
+.left-side-details-container {
+  display: flex;
+  flex-direction: column;
+}
+.right-side-details-container {
+  display: flex;
+  flex-direction: column;
+}

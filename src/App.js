@@ -10,8 +10,8 @@ import './App.css'
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/ipl/:id" component={TeamMatches} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/ipl/:id" component={TeamMatches} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
