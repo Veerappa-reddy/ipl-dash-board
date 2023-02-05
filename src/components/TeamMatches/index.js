@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 
 import LatestMatch from '../LatestMatch'
 
@@ -9,7 +10,7 @@ import './index.css'
 // import {Link} from 'react-router-dom'
 
 class TeamMatches extends Component {
-  state = {teamData: {}}
+  state = {teamData: {}, isLoading: true}
 
   componentDidMount() {
     this.getTeamData()
@@ -48,25 +49,39 @@ class TeamMatches extends Component {
       ),
     }
 
-    this.setState({teamData: formattedData})
+    this.setState({teamData: formattedData, isLoading: false})
     // console.log(formattedData)
   }
 
   render() {
-    const {teamData} = this.state
+    const {teamData, isLoading} = this.state
     const {teamBannerURL, latestPlayedMatch, recentMatches} = teamData
     console.log(recentMatches)
 
     return (
-      <div className="team-bg-container">
-        <img src={teamBannerURL} alt="team banner" />
-        {/* <LatestMatch latestPlayedMatch={latestPlayedMatch} /> */}
-        {/* <ul>
-          {recentMatches.map(eachMatch => (
-            <MatchCard details={eachMatch} />
-          ))}
-        </ul> */}
-      </div>
+      //   <div className="team-matches-container">
+      isLoading ? (
+        <div className="loader-2" testid="loader">
+          <Loader type="Oval" color="#ffffff" height={50} width={50} />
+        </div>
+      ) : (
+        <div className="team-bg-container">
+          <div className="team-container">
+            <img
+              src={teamBannerURL}
+              alt="team banner"
+              className="team-banner"
+            />
+            <LatestMatch latestPlayedMatch={latestPlayedMatch} />
+            <ul className="un-list">
+              {recentMatches.map(eachMatch => (
+                <MatchCard details={eachMatch} key={eachMatch.id} />
+              ))}
+            </ul>
+          </div>
+        </div>
+      )
+      //   </div>
     )
   }
 }

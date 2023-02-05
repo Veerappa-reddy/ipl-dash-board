@@ -1,10 +1,43 @@
 /* Write your CSS here */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .team-bg-container {
   background-color: #a4261d;
   padding: 40px;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  /* width: 90%; */
+  justify-content: center;
+}
+.team-container {
+  width: 90%;
 }
 .team-image {
   /* width: 100px; */
+}
+.team-matches-container {
+  background-color: blueviolet;
+  height: 100vh;
+}
+.loader-2 {
+  background-color: blueviolet;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-banner {
+  /* height: 240px; */
+  width: 95%;
+  padding-left: 60px;
+}
+.un-list {
+  list-style-type: none;
+  flex-wrap: wrap;
+  display: flex;
+  /* margin-left: 60px; */
+  justify-content: center;
 }

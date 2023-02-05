@@ -1,4 +1,9 @@
-// Write your code here
-const NotFound = () => <h1>Not Found</h1>
+import './index.css'
+
+const NotFound = () => (
+  <div className="not-found-container">
+    <h1>Page Not Found!!</h1>
+  </div>
+)
 
 export default NotFound

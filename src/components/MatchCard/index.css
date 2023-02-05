@@ -1,1 +1,31 @@
-/* Write your CSS here */
+.match-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Bree Serif';
+  color: #fff;
+  background-color: #0f172a;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.match-card-image {
+  width: 70px;
+}
+.opponent-team-name1 {
+  font-size: 18px;
+  align-self: center;
+}
+.result {
+  text-align: center;
+}
+.won-css {
+  color: green;
+}
+.lost-css {
+  color: red;
+}
